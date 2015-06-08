@@ -7,7 +7,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import org.trello4j.gson.PermissionTypeDeserializer;
 import org.trello4j.gson.TrelloTypeDeserializer;
-import org.trello4j.model.Board.PERMISSION_TYPE;
+import org.trello4j.model.PermissionType;
 import org.trello4j.model.TrelloType;
 
 import java.io.IOException;
@@ -101,7 +101,7 @@ public class TrelloObjectFactoryImpl {
 			gson = new GsonBuilder()
 					.setDateFormat(DATE_FORMAT)
 					.registerTypeAdapter(
-							PERMISSION_TYPE.class,
+							PermissionType.class,
 							new PermissionTypeDeserializer())
 					.registerTypeAdapter(
 							TrelloType.class,

@@ -2,7 +2,6 @@ package org.trello4j;
 
 import com.google.gson.reflect.TypeToken;
 import org.trello4j.model.*;
-import org.trello4j.model.Board.Prefs;
 import org.trello4j.model.Card.Attachment;
 import org.trello4j.model.Checklist.CheckItem;
 
@@ -28,8 +27,8 @@ public class TrelloImpl implements Trello {
     private static final String METHOD_PUT      = "PUT";
 	private static final String GZIP_ENCODING   = "gzip";
 
-	private String apiKey = null;
-	private String token = null;
+	private String apiKey = "cf3cd802e5baf6f0054c40195c610fb6";
+	private String token = "4a479cd9e6874c2d0adf455908706f1b81fc46c3366e87f2709a1c977e1ec8d7";
 	private TrelloObjectFactoryImpl trelloObjFactory = new TrelloObjectFactoryImpl();
 
 
@@ -1137,6 +1136,7 @@ public class TrelloImpl implements Trello {
 	}
 
 	private InputStream doRequest(String url, String requestMethod) {
+		System.out.println("URL REQUEST -> " + url);
         return doRequest(url, requestMethod, null);
 	}
 

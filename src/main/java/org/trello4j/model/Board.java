@@ -3,12 +3,6 @@ package org.trello4j.model;
 
 public class Board extends TrelloObject {
 
-	public enum PERMISSION_TYPE {
-		PUBLIC, 
-		ORGANIZATION,
-		MEMBERS
-	}
-
 	private String name;
 	private String desc;
 	private boolean closed;
@@ -74,44 +68,5 @@ public class Board extends TrelloObject {
 		this.invited = invited;
 	}
 
-	public class Prefs {
 
-		private PERMISSION_TYPE voting;
-		private PERMISSION_TYPE permissionLevel;
-		private PERMISSION_TYPE invitations;
-		private PERMISSION_TYPE comments;
-
-        public PERMISSION_TYPE getVoting() {
-			return voting;
-		}
-
-		public void setVoting(PERMISSION_TYPE voting) {
-			this.voting = voting;
-		}
-
-		public PERMISSION_TYPE getPermissionLevel() {
-			return permissionLevel;
-		}
-
-		public void setPermissionLevel(PERMISSION_TYPE permissionLevel) {
-			this.permissionLevel = permissionLevel;
-		}
-
-		public PERMISSION_TYPE getInvitations() {
-			return invitations;
-		}
-
-		public void setInvitations(PERMISSION_TYPE invitations) {
-			this.invitations = invitations;
-		}
-
-		public PERMISSION_TYPE getComments() {
-			return comments;
-		}
-
-		public void setComments(PERMISSION_TYPE comments) {
-			this.comments = comments;
-		}
-
-	}
 }
